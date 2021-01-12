@@ -9,12 +9,13 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2')
+
 class UserProfileChange(UserChangeForm):
     class Meta:
         model = User
         fields = ('username', 'email', 'first_name', 'last_name', 'password')
 
-# class ProfilePic(forms.ModelForm):
-#     class Meta:
-#         model = UserProfile
-#         fields = ('profile_pic',)
+class ProfilePic(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ('profile_pic',)
